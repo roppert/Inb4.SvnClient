@@ -13,6 +13,7 @@ namespace Inb4.SvnClient
         None, Read, Write
     }
 
+    /// Hello this is a comment
     public class Repository
     {
         public string SVNRoot { get; set; }
