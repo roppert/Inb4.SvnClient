@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>roppert</authors>
+    <owners>roppert</owners>
+    <licenseUrl>https://github.com/roppert/Inb4.SvnClient/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/roppert/Inb4.SvnClient</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Library for manipulating SVN repositories accessible on local filesystem. Built upon the SharpSvn library.</description>
+    <releaseNotes>Initial release.</releaseNotes>
+    <copyright>Copyright 2014</copyright>
+    <tags>Subversion Svn</tags>
+    <dependencies>
+      <dependency id="SharpSVN" version="1.8" />
+    </dependencies>
+  </metadata>
+</package>
