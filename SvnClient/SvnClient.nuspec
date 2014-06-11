@@ -14,7 +14,7 @@
     <copyright>Copyright 2014</copyright>
     <tags>Subversion Svn</tags>
     <dependencies>
-      <dependency id="SharpSVN" version="1.8" />
+      <dependency id="SharpSvn.1.8-x86" version="1.8005.2830" />
     </dependencies>
   </metadata>
 </package>
