@@ -10,11 +10,17 @@ namespace ExampleApplication
         {
             string svnroot = ConfigurationManager.AppSettings["SVNRoot"];
             Client client = new Client(svnroot);
-            foreach(Repository repository in client.Repositories())
-                foreach(User user in repository.Users())
+            foreach (Repository repository in client.Repositories())
+            {
+                foreach (User user in repository.Users())
                     Console.WriteLine("{0}: {1}", repository.Name, user.Name);
 
-            Console.Read(); // Hold off closing the console window
+                Console.WriteLine("---");
+                Console.WriteLine(string.Format("{0} has user 'bamse': {1}", repository.Name, repository.HasUser("bamse")));
+                Console.WriteLine("---");
+            }
+
+            //Console.Read(); // Hold off closing the console window
         }
     }
 }

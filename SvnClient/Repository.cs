@@ -19,6 +19,7 @@ namespace Inb4.SvnClient
         public string SVNRoot { get; set; }
         public string Name { get; set; }
         public string RepositoryPath { get; set; }
+
         public Access AnonymousAccess
         {
             get
@@ -27,6 +28,7 @@ namespace Inb4.SvnClient
                 return (Access)Enum.Parse(typeof(Access), val);
             }
         }
+
         public Access AuthenticatedAccess
         {
             get
@@ -45,9 +47,9 @@ namespace Inb4.SvnClient
             RepositoryPath = Path.Combine(SVNRoot, Name);
         }
 
-        public List<User> Users(string repository = null)
+        public List<User> Users(string repositoryname = null)
         {
-            string passwd = (repository == null) ? RepositoryPath : Path.Combine(SVNRoot, repository);
+            string passwd = (repositoryname == null) ? RepositoryPath : Path.Combine(SVNRoot, repositoryname);
             passwd = Path.Combine(passwd, "conf", "passwd");
 
             List<User> users = new List<User>();
@@ -72,6 +74,15 @@ namespace Inb4.SvnClient
             }
 
             return users;
+        }
+
+        public bool HasUser(string username)
+        {
+            foreach (User user in this.Users())
+                if (username == user.Name)
+                    return true;
+
+            return false;
         }
 
         public void Create(string name)
