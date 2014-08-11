@@ -10,11 +10,11 @@
     <projectUrl>https://github.com/roppert/Inb4.SvnClient</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Library for manipulating SVN repositories accessible on local filesystem. Built upon the SharpSvn library.</description>
-    <releaseNotes>Added Repository.HasUser(string username)</releaseNotes>
+    <releaseNotes>Added Repository.Create() and made Repository.Create(string name) obsoloete.</releaseNotes>
     <copyright>Copyright 2014</copyright>
     <tags>Subversion Svn</tags>
     <dependencies>
-      <dependency id="SharpSvn.1.8-x86" version="1.8005.2830" />
+      <dependency id="SharpSvn.1.8-x86" version="1.8009.3299.43" />
     </dependencies>
   </metadata>
 </package>

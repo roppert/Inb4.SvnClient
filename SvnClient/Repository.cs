@@ -85,11 +85,14 @@ namespace Inb4.SvnClient
             return false;
         }
 
+        [Obsolete("Replaced by Repository.Create()", true)]
         public void Create(string name)
         {
-            Name = name;
-            RepositoryPath = Path.Combine(SVNRoot, Name);
+            this.Create();
+        }
 
+        public void Create()
+        {
             SvnRepositoryClient client = new SvnRepositoryClient();
 
             if (Directory.Exists(RepositoryPath))

@@ -1,0 +1,6 @@
+Update assembly version number.
+Update releaseNotes in SvnClient.nuspec
+Update packages.config if needed
+Open command windows and run (where N.N is new version number, the file produced by first command):
+  nuget pack SvnClient.csproj
+  nuget push Inb4.SvnClient.0.0.N.N.nupkg
